@@ -14,21 +14,7 @@ function makeInfinityAdder() {
 
     total += x;
 
-    function inner(y) {
-      if (typeof y === 'undefined') {
-        const result = total;
-
-        total = 0;
-
-        return result;
-      }
-
-      total += y;
-
-      return inner;
-    }
-
-    return inner;
+    return adder;
   }
 
   return adder;
